@@ -8,20 +8,28 @@ function getComputerChoice(){
 
 function singleRound(){
     let computerSelection = getComputerChoice();
-    let playerSelection = prompt("Rock, Paper, Scissors?")
+    let playerSelection = prompt("Rock, Paper, Scissors?").toLowerCase()
     if (playerSelection == 'rock' && computerSelection == 'scissors'
      || playerSelection == 'paper' && computerSelection == 'rock' 
      || playerSelection == 'scissors' && computerSelection == 'paper') {
-        alert ('You win!') 
+        alert ('You win!')
+        console.log('You win') 
         return 'Win'}
     else if (playerSelection == computerSelection) {
         alert ('Tie!')
+        console.log('Tie!') 
         return 'Tie'
-    }
+    } 
     else {
         alert ('You Lose!')
-        return 'lose';
+        return 'Lose'; 
     }
 }
-
-singleRound()
+function game(){
+    singleRound()
+    singleRound()
+    singleRound()
+    singleRound()
+    singleRound()
+}
+game()
